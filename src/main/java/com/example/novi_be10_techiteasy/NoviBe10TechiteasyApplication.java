@@ -1,5 +1,5 @@
 package com.example.novi_be10_techiteasy;
-
+//dit is een wijziging
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
