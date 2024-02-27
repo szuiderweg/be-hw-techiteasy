@@ -9,5 +9,4 @@ public class NoviBe10TechiteasyApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(NoviBe10TechiteasyApplication.class, args);
 	}
-
 }
