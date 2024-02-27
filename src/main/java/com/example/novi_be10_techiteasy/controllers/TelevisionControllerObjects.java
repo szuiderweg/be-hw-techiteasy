@@ -1,3 +1,4 @@
+//In deze controller worden televisie objecten gemaakt en bewerkt, maar dat is helaas niet volgens de opdracht
 package com.example.novi_be10_techiteasy.controllers;
 
 import com.example.novi_be10_techiteasy.models.Television;
@@ -10,7 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("televisions")//vaste prefix voor requests gerelateerd aan television requests
-public class TelevisionController {
+public class TelevisionControllerObjects {
     //laten we de lesopdracht over auto's een beetje imiteren door hier een list van tv's te maken
 
     private Long currentId = 1L;//teller die het huidige beschikbare id-nummer bijhoudt en toewijst aan een nieuwe tv
