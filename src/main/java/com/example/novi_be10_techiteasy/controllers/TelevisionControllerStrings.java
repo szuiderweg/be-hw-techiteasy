@@ -34,13 +34,17 @@ public class TelevisionControllerStrings {
     //put 1 tv
     @PutMapping("/{id}")
     public ResponseEntity<String> updateTelevision(@PathVariable long id ,@RequestBody String televisionData){
-       String updatedTv = "television number " + id +"is updated with "+ televisionData;
+
+
+
+
+        String updatedTv = "television number " + id +"is updated with "+ televisionData;
        return ResponseEntity.ok(updatedTv);
     }
 
     //delete 1 tv
     @DeleteMapping()//deze method delete niks, maar geeft alleen een melding terug
-    public ResponseEntity<Void> deleteTelevision(){
+    public ResponseEntity<Void> deleteTelevision(@PathVariable long id){
         return ResponseEntity.noContent().build();
     }
 }
