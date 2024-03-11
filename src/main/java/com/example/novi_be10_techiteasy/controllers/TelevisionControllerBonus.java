@@ -11,7 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("televisions")//vaste prefix voor requests gerelateerd aan television requests
-public class TelevisionControllerObjects {
+public class TelevisionControllerBonus {
     //laten we de lesopdracht over auto's een beetje imiteren door hier een list van tv's te maken
 
     private Long currentId = 1L;//teller die het huidige beschikbare id-nummer bijhoudt en toewijst aan een nieuwe tv

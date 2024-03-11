@@ -9,18 +9,18 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("televisions")//vaste prefix voor requests gerelateerd aan television requests
-public class TelevisionControllerStrings {
+public class TelevisionControllerBasis {
  //geen properties hier, de methods doen niks, maar returnen alleen een statuscode en eventueel een string
 
     //get all tv's
     @GetMapping
     public ResponseEntity<String> getTelevisions() {
-        return ResponseEntity.ok("televisions!");
+        return ResponseEntity.ok("televisions!");//return de String met een 200 status
     }
 
     //get 1 tv
     @GetMapping("/{id}")
-    public  ResponseEntity<String> getTelevision(@PathVariable long id) {
+    public  ResponseEntity<String> getTelevision(@PathVariable int id) {
         String reqTv = "television number " + id;
         return ResponseEntity.ok(reqTv);
     }
@@ -28,24 +28,19 @@ public class TelevisionControllerStrings {
     //post 1
     @PostMapping
     public ResponseEntity<String> createTelevision(@RequestBody String tv){
-        return ResponseEntity.created(null).body("new television!" +tv);//deze milde error negeren we even omdat deze response letterlijk uit de opgave komt
+        return ResponseEntity.created(null).body("new television!" +tv);//deze milde error negeren we even omdat deze response letterlijk uit de opgave komt. returnt 201 created status en de string
     }
 
     //put 1 tv
     @PutMapping("/{id}")
-    public ResponseEntity<String> updateTelevision(@PathVariable long id ,@RequestBody String televisionData){
-
-
-
-
-        String updatedTv = "television number " + id +"is updated with "+ televisionData;
-       return ResponseEntity.ok(updatedTv);
+    public ResponseEntity<Void> updateTelevision(@PathVariable int id ,@RequestBody String televisionData){
+        //return 204 status
+        return ResponseEntity.noContent().build();
     }
 
     //delete 1 tv
-    @DeleteMapping()//deze method delete niks, maar geeft alleen een melding terug
-    public ResponseEntity<Void> deleteTelevision(@PathVariable long id){
-        return ResponseEntity.noContent().build();
+    @DeleteMapping("/{id}")//deze method delete niks, maar geeft alleen een melding terug
+    public ResponseEntity<Void> deleteTelevision(@PathVariable int id){
+        return ResponseEntity.noContent().build();//return 204 status en verder niks
     }
 }
-//helper is nu overbodig
