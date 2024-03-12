@@ -10,22 +10,22 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-@RequestMapping("televisions")//vaste prefix voor requests gerelateerd aan television requests
+@RequestMapping(value = "/bonustelevisions")//vaste prefix voor requests gerelateerd aan television requests
 public class TelevisionControllerBonus {
     //laten we de lesopdracht over auto's een beetje imiteren door hier een list van tv's te maken
-
-    private Long currentId = 1L;//teller die het huidige beschikbare id-nummer bijhoudt en toewijst aan een nieuwe tv
-    private List<Television> tvList = new ArrayList<>();
+    //de list is static omdat er maar 1 lijst kan zijn, geen meerdere instances van deze lijst
+    // de lijst is final omdat de lisjt op zich verandert niet, alleen de waarden die erin staan
+    private static final List <String> tvList = new ArrayList<>();
 
     //get all tv's
     @GetMapping
-    public ResponseEntity<List<Television>> getTelevisions() {
-        return ResponseEntity.ok(tvList);
+    public ResponseEntity<List<String>> getTelevisions() {
+        return ResponseEntity.ok(tvList);//return complete list of tv-strings met 200 status
     }
 
     //get 1 tv
     @GetMapping("/{id}")
-    public  ResponseEntity<Television> getTelevision(@PathVariable long id){
+    public  ResponseEntity<String> getTelevision(@PathVariable long id){
        Television reqTv = findTvById(id);
        if(reqTv == null){
         return ResponseEntity.notFound().build();
