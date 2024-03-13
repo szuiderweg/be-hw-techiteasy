@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-@RequestMapping("televisions")//vaste prefix voor requests gerelateerd aan television requests
+@RequestMapping("eigentelevisions")//vaste prefix voor requests gerelateerd aan television requests
 public class TelevisionControllerEigenUitwerking {
     //laten we de lesopdracht over auto's een beetje imiteren door hier een list van tv's te maken
 

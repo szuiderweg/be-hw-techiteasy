@@ -1,6 +1,7 @@
 package com.example.novi_be10_techiteasy.controllers;
 
 import com.example.novi_be10_techiteasy.exceptions.RecordNotFoundException;
+import com.example.novi_be10_techiteasy.exceptions.TelevisionNameTooLongException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
