@@ -1,4 +1,7 @@
 package com.example.novi_be10_techiteasy.models;
+
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+
 //dit is een placeholder class om de controller class soort van werkend te krijgen
 //het bestaat alleen uit een naam en een id-nummer
 public class Television {
