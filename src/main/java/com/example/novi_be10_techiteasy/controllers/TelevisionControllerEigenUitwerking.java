@@ -72,4 +72,4 @@ public class TelevisionControllerEigenUitwerking {
         return null;
     }
 }
-//die helper is echt wel nodig, want ik gebruik hem hier al 3 keer.
+//die helper is echt wel nodig, want ik gebruik hem hier al 3 keer. Deze helper vervangt de zoek functie die anders in de repository zou zitten.
