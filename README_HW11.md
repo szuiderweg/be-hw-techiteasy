@@ -46,8 +46,8 @@ Je hebt de [vorige les](https://github.com/hogeschoolnovi/backend-spring-boot-te
 ### Belangrijk
 - Laat de _application.properties_ overeenkomen met de gegevens van `PgAdmin`
 - Je mag de volgende ResponseEntiteiten als return waardes gebruiken:
-  - `ResponseEntiteit.ok("television")`
-  - `ResponseEntiteit.created(null).body("television")`
+  - `ResponseEntiteit.ok("televisionEigenUitwerking")`
+  - `ResponseEntiteit.created(null).body("televisionEigenUitwerking")`
   - `ResponseEntiteit.noContent().build()`
 - Let er op dat je database-password niet hetzelfde password is dat je gebruikt voor je email, facebook of andere applicatie. Aangezien deze applicatie niet gedeployed hoeft te worden, kun je een makkelijk password kiezen als "password" of "banaan".
 
@@ -68,7 +68,7 @@ _Let op_: het is uitdagender om jouw eigen stappenplan te maken. Mocht je niet z
 12. Extend de _repository_ met de `JpaRepository` en geef de juiste attributen mee. (het type van het model en het type van het ID)
 
 ## Bonus
-Een television heeft best veel variabelen, maar er zit nog weinig variatie in de types. Het zijn enkel Strings, Booleans of nummers. Probeer andere datatypes te gebruiken zoals:
+Een televisionEigenUitwerking heeft best veel variabelen, maar er zit nog weinig variatie in de types. Het zijn enkel Strings, Booleans of nummers. Probeer andere datatypes te gebruiken zoals:
 - een Datum voor sold (verkoopDatum) of originalStock (inkoopDatum) (er zijn in Java verschillende opties om een datum te maken)
 - Een enumeratie voor een of meerdere van availableSize, refreshRate, screenType en screenQuality
 - Zoek zelf op Baeldung, W3, GeeksForGeeks, etc op hoe je zulke datatypes maakt.

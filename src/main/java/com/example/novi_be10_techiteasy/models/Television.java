@@ -1,26 +1,17 @@
 package com.example.novi_be10_techiteasy.models;
 
-import org.springframework.boot.autoconfigure.domain.EntityScan;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
-//dit is een placeholder class om de controller class soort van werkend te krijgen
-//het bestaat alleen uit een naam en een id-nummer
+@Entity
+@Table(name = "televisions")
 public class Television {
+    @Id
+    @GeneratedValue
     private long id;
     private String model;
+    private double price;
 
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public void setModel(String model) {
-        this.model = model;
-    }
 }

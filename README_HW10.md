@@ -31,8 +31,8 @@ De opdracht moet voldoen aan de volgende voorwaarden:
 Bij het inleveren van deze opdracht is de applicatie nog niet geheel functioneel, omdat we hier meer kennis over andere technieken voor nodig hebben die later in de cursus aan bod komt. 
 
 Je mag de volgende ResponseEntiteiten als return waardes gebruiken:
-  - `ResponseEntity.ok("television")`
-  - `ResponseEntity.created(null).body("television")`
+  - `ResponseEntity.ok("televisionEigenUitwerking")`
+  - `ResponseEntity.created(null).body("televisionEigenUitwerking")`
   - `ResponseEntity.noContent().build()`
 
 ## Stappenplan
@@ -52,7 +52,7 @@ _Let op_: het is uitdagender om jouw eigen stappenplan te maken. Mocht je niet z
 12. Vul de klasse aan aan de hand van het voorbeeld in hoofdstuk 3.4 van de cursus Spring Boot.
 
 ## Bonus opdracht
-We returnen nu bij een aantal RequestMappings de String "television". Uiteindelijk is het de bedoeling dat we data uit een database gaan returnen. 
+We returnen nu bij een aantal RequestMappings de String "televisionEigenUitwerking". Uiteindelijk is het de bedoeling dat we data uit een database gaan returnen. 
 Voor nu is dat nog onbekend terrein, maar we kunnen wel doen alsof we een database hebben.  
 - Maak in je controller class een Lijst van Strings genaamd "televisionDataBase", dit gaat dienen als onze database. 
 - Zorg dat je GET requests de juiste data returnen uit de lijst. (Gebruik de "id" PathVariable als index van de lijst)

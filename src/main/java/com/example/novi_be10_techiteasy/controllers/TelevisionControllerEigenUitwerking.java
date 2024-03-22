@@ -1,7 +1,7 @@
 //In deze controller worden televisie objecten gemaakt en bewerkt, maar dat is helaas niet volgens de opdracht
 package com.example.novi_be10_techiteasy.controllers;
 
-import com.example.novi_be10_techiteasy.models.Television;
+import com.example.novi_be10_techiteasy.models.TelevisionEigenUitwerking;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -15,18 +15,18 @@ public class TelevisionControllerEigenUitwerking {
     //laten we de lesopdracht over auto's een beetje imiteren door hier een list van tv's te maken
 
     private Long currentId = 1L;//teller die het huidige beschikbare id-nummer bijhoudt en toewijst aan een nieuwe tv
-    private final List<Television> tvList = new ArrayList<>();
+    private final List<TelevisionEigenUitwerking> tvList = new ArrayList<>();
 
     //get all tv's
     @GetMapping
-    public ResponseEntity<List<Television>> getTelevisions() {
+    public ResponseEntity<List<TelevisionEigenUitwerking>> getTelevisions() {
         return ResponseEntity.ok(tvList);
     }
 
     //get 1 tv
     @GetMapping("/{id}")
-    public  ResponseEntity<Television> getTelevision(@PathVariable long id){
-       Television reqTv = findTvById(id);
+    public  ResponseEntity<TelevisionEigenUitwerking> getTelevision(@PathVariable long id){
+       TelevisionEigenUitwerking reqTv = findTvById(id);
        if(reqTv == null){
         return ResponseEntity.notFound().build();
         }
@@ -35,7 +35,7 @@ public class TelevisionControllerEigenUitwerking {
 
     //post 1
     @PostMapping
-    public ResponseEntity<Television> createTelevision(@RequestBody Television tv){
+    public ResponseEntity<TelevisionEigenUitwerking> createTelevision(@RequestBody TelevisionEigenUitwerking tv){
         tv.setId(currentId++);
         tvList.add(tv);
         return ResponseEntity.status(HttpStatus.CREATED).body(tv);//
@@ -43,19 +43,19 @@ public class TelevisionControllerEigenUitwerking {
 
     //put 1 tv
     @PutMapping("/{id}")
-    public ResponseEntity<Television> updateTelevision(@PathVariable long id ,@RequestBody Television television){
-        Television reqTv = findTvById(id);
+    public ResponseEntity<TelevisionEigenUitwerking> updateTelevision(@PathVariable long id , @RequestBody TelevisionEigenUitwerking televisionEigenUitwerking){
+        TelevisionEigenUitwerking reqTv = findTvById(id);
         if(reqTv == null){
             return ResponseEntity.notFound().build();
         }
-        television.setModel(television.getModel());
-        return ResponseEntity.ok(television);
+        televisionEigenUitwerking.setModel(televisionEigenUitwerking.getModel());
+        return ResponseEntity.ok(televisionEigenUitwerking);
     }
 
     //delete 1 tv
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteTelevision(@PathVariable long id){
-       Television reqTv = findTvById(id);
+       TelevisionEigenUitwerking reqTv = findTvById(id);
         if(reqTv == null){
             return ResponseEntity.notFound().build();
         }
@@ -63,8 +63,8 @@ public class TelevisionControllerEigenUitwerking {
         return ResponseEntity.noContent().build();
     }
 
-    private Television findTvById(Long id) {
-        for (Television tv : tvList) {
+    private TelevisionEigenUitwerking findTvById(Long id) {
+        for (TelevisionEigenUitwerking tv : tvList) {
             if (tv.getId() == id){
                 return tv;
             }
