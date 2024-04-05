@@ -5,7 +5,8 @@ package com.example.novi_be10_techiteasy.controllers;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
+//todo deze controller doet vooralsnog niks met de model en repository klasse. hier moet vast verandering in komen
+//todo voordat ik deze controller ga aanpassen eerst postman apicalls opzetten om responses te testen.
 
 @RestController
 @RequestMapping("televisions")//vaste prefix voor requests gerelateerd aan television requests
