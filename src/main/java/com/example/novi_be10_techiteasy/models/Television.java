@@ -6,7 +6,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "televisions")
+@Table(name = "televisions")//negeer deze error. komt doordat de database niet in IntelliJ woont
 public class Television {
     @Id
     @GeneratedValue
